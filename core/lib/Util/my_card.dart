@@ -20,7 +20,7 @@ class MyCard extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal:25),
       child: Container(
-                    width: 300,
+                    width: 200,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: color,
@@ -28,7 +28,9 @@ class MyCard extends StatelessWidget {
                       ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        SizedBox(height: 10),
                         Text('Balance',
                         style: TextStyle(
                           color: Colors.white,
@@ -41,7 +43,7 @@ class MyCard extends StatelessWidget {
                           fontSize: 24,
                           ),
                         ),
-    
+                        SizedBox(height: 26,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

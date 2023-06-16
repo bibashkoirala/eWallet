@@ -30,12 +30,15 @@ class _HomePageState extends State<HomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.grey[200],
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(onPressed: () {} , icon: Icon(Icons.home)),
-            IconButton(onPressed: () {} , icon: Icon(Icons.settings)),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(onPressed: () {} , icon: Icon(Icons.home, size: 28, color: Colors.pink[600],)),
+              IconButton(onPressed: () {} , icon: Icon(Icons.settings, size: 28,)),
+            ],
+          ),
         ),
       ),
       body: SafeArea(
@@ -89,13 +92,13 @@ class _HomePageState extends State<HomePage> {
 
                 // cards
                Container(
-                height: 200,
+                height: 150,
                 child: PageView(
                   scrollDirection: Axis.horizontal,
                   controller: _controller,
                   children: [
                     MyCard(
-                      balance: 5689.50,
+                      balance: 589.50,
                       cardNumber: 1234-5432-8987-98774,
                       expiryMonth: 12-25,
                       expiryear: 2085,
@@ -148,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10,),
 
              Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(10.0),
                  child: Column(
                     children: [
                     //statistic
@@ -157,12 +160,18 @@ class _HomePageState extends State<HomePage> {
                      tileTitle: 'Statistics',
                       tileSubtitle: 'Payments and Income',
                       ),
+                      //Favroite List
                    MyListtile(
+                   iconImagePath: 'lib/icons/plus.png',
+                     tileTitle: 'Favroite List',
+                      tileSubtitle: 'Saved Contacts',
+                      ),
+                    //transaction
+                     MyListtile(
                    iconImagePath: 'lib/icons/plus.png',
                      tileTitle: 'Transactions',
                       tileSubtitle: 'Transactions History',
                       ),
-                    //transaction
                   ],
                   ),
                 ),
