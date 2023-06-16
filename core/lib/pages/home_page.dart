@@ -1,5 +1,6 @@
 import 'package:core/Util/my_button.dart';
 import 'package:core/Util/my_card.dart';
+import 'package:core/Util/my_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         padding: EdgeInsets.all(4),
                         decoration: BoxDecoration(
-                          color: Colors.grey[400],
+                          color: Color(0xFFFFECEE),
                           shape: BoxShape.circle,
                         ),
                         child: IconButton(
@@ -90,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                       expiryMonth: 12-25,
                       expiryear: 2085,
                       color: Color(0xFFFF3D55),
+                     
 
                     ),
                     MyCard(
@@ -113,24 +115,41 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height:25),
 
                 // buttons - send, pay,bills
-                Row(
-                  children: [
-                    //send
-                  MyButton(),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      //text
-                   Text('Send',
-                   style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //send
+                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Send',),
+                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Pay',),
+                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Bills',),
+                       
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10,),
 
-                   ),
-                   ),
+             Padding(
+              padding: const EdgeInsets.all(25.0),
+                 child: Column(
+                    children: [
+                    //statistic
+                  MyListtile(
+                    iconImagePath: 'lib/icons/plus.png',
+                     tileTitle: 'Statistics',
+                      tileSubtitle: 'Payments and Income',
+                      ),
+                   MyListtile(
+                   iconImagePath: 'lib/icons/plus.png',
+                     tileTitle: 'Transactions',
+                      tileSubtitle: 'Transactions History',
+                      ),
+                    //transaction
                   ],
-                )
+                  ),
+                ),
+
                 //column - stats, transactions
               ],
             ),

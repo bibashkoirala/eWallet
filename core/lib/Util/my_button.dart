@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key});
+  final String iconImagePath;
+  final String buttonText;
+
+  const MyButton({super.key,
+  required this.iconImagePath,
+  required this.buttonText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +18,33 @@ class MyButton extends StatelessWidget {
                           height:75,
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
-                            color: Colors.amber[200],
+                          color: Color(0xFFFFECEE),
+                 
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.shade600,
-                                blurRadius: 20,
-                                spreadRadius: 2,
-                              )
-                            ]
+                                blurRadius: 10,
+                                spreadRadius: 0,
+                              ),
+                            ],
                           ),
                           child: Center(
-                            child: Image.asset('lib/icons/plus.png'),
+                            child: Image.asset(iconImagePath),
                             ),
                         ),
+                         SizedBox(
+                        height: 10,
+                      ),
+                      //text
+                   Text(buttonText,
+                   style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepPurple,
+
+                   ),
+                   ),
                       ],
                     );
   }
