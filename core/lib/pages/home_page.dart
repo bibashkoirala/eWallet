@@ -141,9 +141,9 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //send
-                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Send',),
-                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Pay',),
-                    MyButton(iconImagePath: 'lib/icons/plus.png', buttonText: 'Bills',),
+                    MyButton(iconImagePath: 'lib/icons/cost.gif', buttonText: 'Send',),
+                    MyButton(iconImagePath: 'lib/icons/wallet.gif', buttonText: 'Account',),
+                    MyButton(iconImagePath: 'lib/icons/bill.gif', buttonText: 'Bills',),
                        
                     ],
                   ),
@@ -156,19 +156,19 @@ class _HomePageState extends State<HomePage> {
                     children: [
                     //statistic
                   MyListtile(
-                    iconImagePath: 'lib/icons/plus.png',
+                    iconImagePath: 'lib/icons/laptop.gif',
                      tileTitle: 'Statistics',
                       tileSubtitle: 'Payments and Income',
                       ),
                       //Favroite List
                    MyListtile(
-                   iconImagePath: 'lib/icons/plus.png',
+                   iconImagePath: 'lib/icons/heart.gif',
                      tileTitle: 'Favroite List',
                       tileSubtitle: 'Saved Contacts',
                       ),
                     //transaction
                      MyListtile(
-                   iconImagePath: 'lib/icons/plus.png',
+                   iconImagePath: 'lib/icons/checklist.gif',
                      tileTitle: 'Transactions',
                       tileSubtitle: 'Transactions History',
                       ),

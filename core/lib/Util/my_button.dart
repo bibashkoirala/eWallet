@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
                         //icon
                         Container(
                           height:75,
-                          padding: EdgeInsets.all(20),
+                          padding: EdgeInsets.all(12),
                           decoration: BoxDecoration(
                           color: Color(0xFFFFECEE),
                  
